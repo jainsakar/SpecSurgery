@@ -1,0 +1,237 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+/*
+#header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #4d2c91;
+	height: 150px;
+	text-align: center;
+	color: white;
+	padding-top: 30px;
+	font-size: 36px;
+	letter-spacing: 5px;
+	z-index: 99;
+}
+#header span{
+	width: 100%;
+	font-size: 80px;
+	font-weight: 500;
+}*/
+
+#navbar{
+	margin-top: 0px;
+
+
+
+}
+.navbar-default{
+	/*background: transparent;*/
+	/*background: #7e57c2;*/
+	border-top: 1px solid rgba(0,0,0,0.3);
+	background:rgba(100,53,201,0.25);
+	box-shadow: inset 0 1px rgba(255,255,255,0.3),inset 0 10px rgba(100,53,201,0.3),inset 0 10px 20px rgba(100,53,201,0.25),inset 0 -15px 30px rgba(100,53,201,0.25);
+}
+
+.navbar-default .navbar-brand{
+	color: white;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: white;
+}
+.navbar-default .navbar-nav>li:hover{
+	color: pink;
+}
+
+html,body{
+	height: 100%;
+	margin: 0;
+}
+#test{
+	/*margin-top: -20px;*/
+	height:100% ;
+	background:url('https://media2.s-nbcnews.com/i/MSNBC/Components/Video/__NEW/nn_10bwi_hospital_130731.jpg'),linear-gradient(45deg,rgba(120,100,100,0.5),rgba(255,50,200,0.5));
+	text-align: center;
+	/*padding-top: 15%;;*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+.navbar-brand{
+	font-size: 1.6em;
+}
+.navbar-brand img{
+	transform: scale(0.3);
+}
+.container-fluid{
+	font-size: 1.5em;
+}
+#welcome{
+	padding-top: 15%;
+}
+#welcome div div h1{
+	text-shadow: 1px 1px 1px black;
+}
+#welcome div div h3{
+	text-shadow: 1px 1px 2px black;
+	color:rgb(206, 147, 255);
+}
+#test h1{
+	font-size: 70px;
+	color:white;
+	line-height: 0.8em;
+
+}
+#test h3{
+	letter-spacing: 3px;
+	color:white;
+	line-height: 1.6em;
+}
+#welcome button{
+	font-size: 1.5em;
+	width: 250px;
+	border-radius: 7px;
+	opacity: 0.8;
+	letter-spacing: 3px
+}
+#test button i{
+	float:right;
+	font-size: 1.5em;
+}
+
+#test2{
+	height: 100%;
+	background: #ede7f6;
+}
+.btn-primary{
+	background-color: #6435c9;
+}
+.btn-primary:hover{
+	background-color: #290197;
+}
+.card-header{
+	background:rgba(200,200,200,0.8);
+	height: 30px;
+}
+img{
+	width: 20rem;
+	height: 15rem;
+	background-color: rgba(200,200,200,0.8);
+}
+/*
+#test3{
+	background:linear-gradient(45deg,rgba(149, 117, 205,0.5),rgba(101, 73, 156,0.7)), url("https://wallpaperscraft.com/image/tablets_capsules_multi-colored_drug_48978_1920x1080.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 80%;
+
+	background-attachment: fixed;
+}
+*/
+#test3{
+        background-color: purple;
+        height:300px;
+
+}
+/*
+#test3 #number{
+	font-size: 7em;
+}
+#test3 #number_value{
+	font-size: 3.5em;
+}
+*/
+
+#test4{
+	height: 80%;
+	background: white;
+}
+/*#test4 .container{
+	padding-top: 2%;
+}*/
+#test5{
+	height: 100%;
+	background-image: url("https://whataboutweed.org/dev/wp-content/uploads/2015/01/stethoscope.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+/*#sidebar ul {
+	list-style: none;
+	position: absolute;
+	top: 260px;
+	left: 0px;
+	padding: 0;
+	margin: 0;
+	background: rgba(70,70,100,0.7);
+	width: 200px;
+}
+#sidebar ul li{
+	text-align: center;
+	line-height: 20px;
+
+	height: 50px;
+	border: 1px solid white;
+	color: white;
+	padding-top: 15px;
+}
+#sidebar ul li.makewhite{
+	background: rgb(70,70,100);
+}
+#sidebar ul li a{
+	text-decoration: none;
+	color: white;
+}
+#sidebar.disp{
+	display: none;
+
+}
+#sidebar ul ul {
+	display: none;
+	position: relative;
+	top: -31px;
+	left: 202px;
+	/*margin-left: 202px;
+	margin-top: 50px;
+	width: 180px;
+
+}
+#sidebar ul ul li{
+	text-align: center;
+	line-height: 20px;
+
+	height: 40px;
+	border: 1px solid white;
+	color: white;
+	padding-top: 10px;
+}
+#sidebar ul ul.makevisible{
+	display: block;
+
+}
+#footer{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+	background: rgba(70,70,100,0.7);
+}
+#footer p{
+	margin-top: 10px;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+}*/

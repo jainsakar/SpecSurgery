@@ -1,0 +1,22 @@
+<% include partials/header%>
+<link rel="stylesheet" type="text/css" href="../stylesheets/new.css">
+
+<div id="box" class="ui main text container segment">
+    <div class="ui huge header">Admin Panel</div>
+    <form  class="ui form" action="/admin" method="POST">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="admin[username]" placeholder="username">
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="admin[password]" placeholder="password">
+        </div>
+        <input class="ui violet basic button" type="submit">
+    </form>
+</div>
+
+
+
+
+<% include partials/footer%>

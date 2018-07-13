@@ -1,0 +1,30 @@
+<% include partials/header.ejs%>
+<div class="ui main text container segment">
+    <div class="ui huge header"><%=fraud.title%></div>
+    <div class="ui top attached">
+        <div class="item">
+                <img class="ui centered rounded image" src="<%=fraud.image%>">
+
+        </div>
+        <div class="content">
+                <span><b><%=fraud.hospital %></b>,<%=fraud.location %>,<br><%=fraud.created.toDateString()%></span>
+
+        </div>
+        <div class="description">
+            <p><%-fraud.body%></p>
+        </div>
+        
+        <div>
+            <a class="ui orange basic button" href="/frauds/<%=fraud._id%>/edit">Edit</a>
+             <form id="delete" class="ui form" action="/frauds/<%=fraud._id%>?_method=DELETE"method="POST" style="float:left;">
+                 <button class="ui red basic button" >Delete</button>
+            </form>
+        </div>
+    
+    </div>
+   
+    
+    
+    
+    
+<% include partials/footer.ejs%>    

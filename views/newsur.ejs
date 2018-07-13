@@ -1,0 +1,30 @@
+<% include partials/header%>
+<link rel="stylesheet" type="text/css" href="../stylesheets/new.css">
+
+<div id="box" class="ui main text container segment">
+    <div class="ui huge header">New Surgery</div>
+    <form  class="ui form" action="/admin/hospitals/<%=hospital._id%>/surgery" method="POST">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="surgery[disease]" placeholder="Name">
+        </div>
+        <div class="field">
+            <label>Cost</label>
+            <input type="text" name="surgery[cost]" placeholder="Cost">
+        </div>
+        <div class="field">
+            <label>Success Rate(0-100%)</label>
+            <input type="text" name="surgery[successRate]" placeholder="Success Rate">
+        </div>
+        <div class="field">
+            <label>Casualities</label>
+            <input type="text" name="surgery[casualities]" placeholder="Casualities">
+        </div> 
+        <input class="ui violet basic button" type="submit">
+    </form>
+</div>
+
+
+
+
+<% include partials/footer%>

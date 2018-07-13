@@ -1,0 +1,100 @@
+<% include partials/header.ejs %>
+<link rel="stylesheet" type="text/css" href="../stylesheets/fraud.css">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><strong>Specube</strong></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="frauds/new">Create</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a>Welcome, Sakar</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-4">
+              <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action active">
+                    Frauds
+                  </a>
+                  <a href="/barcharts" class="list-group-item list-group-item-action">Per hospital</a>
+                  <a href="#" class="list-group-item list-group-item-action">Per diseases</a>
+          </div>
+      </div>
+      <div class="col-sm-8">
+      
+         <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% frauds.forEach(function(fraud){ %>
+                <div class="item">
+                    <div class="image">
+                        <img src="<%=fraud.image%>">
+                    </div>
+                    <div class="content">
+                        <a id="title" class="header"href="/frauds/<%=fraud._id%>"><%= fraud.title%></a>
+                        <div class="meta">
+                           <span id="hosp"><b><%=fraud.hospital %></b>,<%=fraud.location %>,<br><br><%=fraud.created.toDateString()%></span>
+                        </div>
+                        <div class="description">
+                             <p><%-fraud.body.substring(0,100)%>...</p>
+                        </div>
+                        <div class="extra">
+                            <a class="ui floated basic violet button"  href="/frauds/<%=fraud._id%>">Read More
+                                <i class="right chevron icon"></i>
+                            </a>
+                                
+                        </div>
+                    </div>    
+                </div>
+<% }); %>
+        </div>
+    </div>
+<!--
+          <div class="ui relaxed divided list">
+                  <div class="item">
+                    <img src="https://www.aapc.com/fraud/wp_aapc_content/uploads/2015/02/Low-cost-Medicare-Fraud-Exposes-Doctor-371x270.jpg" height=150em width=200em>
+
+                    <i class="large github middle aligned icon"></i>
+                    <div class="content">
+                      <a class="header">Semantic-Org/Semantic-UI</a>
+                      <div class="description">Updated 10 mins ago</div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <i class="large github middle aligned icon"></i>
+                    <div class="content">
+                      <a class="header">Semantic-Org/Semantic-UI-Docs</a>
+                      <div class="description">Updated 22 mins ago</div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <i class="large github middle aligned icon"></i>
+                    <div class="content">
+                      <a class="header">Semantic-Org/Semantic-UI-Meteor</a>
+                      <div class="description">Updated 34 mins ago</div>
+                    </div>
+                  </div>
+            </div>
+-->
+      </div>
+  </div>
+</div>
+<% include partials/footer.ejs %>

@@ -1,0 +1,34 @@
+<% include partials/header.ejs%>
+<link rel="stylesheet" type="text/css" href="../stylesheets/new.css">
+
+<div id="box" class="ui main text container segment">
+    <div class="ui huge header">Edit <%=fraud.title%></div>
+    <form  class="ui form" action="/frauds/<%=fraud._id%>?_method=PUT"method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="fraud[title]" value="<%=fraud.title%>">
+        </div>
+        <div class="field">
+            <label>Hospital</label>
+            <input type="text" name="fraud[title]" value="<%=fraud.hospital%>">
+        </div>
+        <div class="field">
+            <label>Location</label>
+            <input type="text" name="fraud[title]" value="<%=fraud.location%>">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="fraud[image]" value="<%=fraud.image%>">
+        </div>
+        <div class="field">
+            <label>fraud Content</label>
+            <textarea name="fraud[body]"><%=fraud.body%></textarea>
+        </div>    
+        <input class="ui violet basic button" type="submit">
+    </form>
+</div>
+
+
+
+
+<% include partials/footer.ejs%>

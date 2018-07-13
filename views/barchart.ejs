@@ -1,0 +1,82 @@
+<% include partials/header.ejs %>
+<link rel="stylesheet" type="text/css" href="../stylesheets/barchart.css">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><strong>Specube</strong></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="frauds/new">Create</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a>Welcome, Sakar</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+           <script>
+               var myMap=new Map();
+            <% frauds.forEach(function(fraud){ %>
+             <% if(%>myMap.has(<%fraud.hospital%>)<%){%>
+                  myMap.set(<%fraud.hospital%>,myMap.get(<%fraud.hospital%>)+1);
+                 <%}else{%> 
+                  	myMap.set(<%fraud.hospital%>,1);
+               <%}%> 
+            <% }); %>
+//              
+         
+//         var width = 300, 
+//            scaleFactor = 20, 
+//            barHeight = 30;
+//         
+//         var graph = d3.select("body")
+//            .append("svg")
+//            .attr("width", width)
+//            .attr("height", barHeight * data.length);
+//         
+//         var bar = graph.selectAll("g")
+//            .data(data)
+//            .enter()
+//            .append("g")
+//            .attr("transform", function(d, i) {
+//               return "translate(0," + i * barHeight + ")";
+//            });
+//         bar.append("rect").attr("width", function(d) {
+//            return d * scaleFactor;
+//         })
+//         
+//         .attr("height", barHeight - 1);
+//         
+//         bar.append("text")
+//            .attr("x", function(d) { return (d*scaleFactor); })
+//            .attr("y", barHeight / 2)
+//            .attr("dy", ".35em")
+//            .text(function(d) { return d; });
+//              
+            </script>
+           
+
+
+          </div>
+      </div>
+  </div>
+
+<% include partials/footer.ejs %>

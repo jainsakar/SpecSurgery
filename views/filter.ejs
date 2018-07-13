@@ -1,0 +1,200 @@
+<% include partials/header.ejs %>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><strong>Specube</strong></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a>Welcome, Sakar</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+<div class="container">
+  <div class="row">        
+    <div class="col-sm-7">
+     <div class="ui top attached segment">
+        <div class="ui divided items">
+                <div class="item">
+                    <div class="image">
+                        <img src="<%=hospital.image%>">
+                    </div>
+                    <div class="content">
+                        <a id="title" class="header"href="#"><%= hospital.name%></a>
+                        <div class="meta">
+                           <span id="hosp"><b><%=hospital.location %></b></span>
+                        </div>
+                        <div class="extra">
+                            <a class="ui floated basic violet button"  href="/filter/<%=hospital._id%>">More
+                                <i class="right chevron icon"></i>
+                            </a>
+                                
+                        </div>
+                    </div>    
+                </div>
+        </div>
+    </div>
+    
+    
+    
+    </div>
+    
+  </div>
+</div>
+<!--
+<table class="ui celled padded table">
+  <thead>
+    <tr><th class="single line">Evidence Rating</th>
+    <th>Effect</th>
+    <th>Efficacy</th>
+    <th>Consensus</th>
+    <th>Comments</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>
+        <h2 class="ui center aligned header">A</h2>
+      </td>
+      <td class="single line">
+        Power Output
+      </td>
+      <td>
+        <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+      </td>
+      <td class="right aligned">
+        80% <br>
+        <a href="#">18 studies</a>
+      </td>
+      <td>Creatine supplementation is the reference compound for increasing muscular creatine levels; there is variability in this increase, however, with some nonresponders.</td>
+    </tr>
+    <tr>
+      <td>
+        <h2 class="ui center aligned header">A</h2>
+      </td>
+      <td class="single line">
+        Weight
+      </td>
+      <td>
+        <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+      </td>
+      <td class="right aligned">
+        100% <br>
+        <a href="#">65 studies</a>
+      </td>
+      <td>Creatine is the reference compound for power improvement, with numbers from one meta-analysis to assess potency</td>
+    </tr>
+  </tbody>
+</table>
+-->
+<!--<link rel="stylesheet" type="text/css" href="../stylesheets/compare.css">-->
+
+<!--
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-4 col-sm-6  " >
+        <div class="thumbnail">
+          <div style="overflow: hidden">
+            <img src="http://ak6.picdn.net/shutterstock/videos/3535286/thumb/1.jpg" alt="heart">
+          </div>
+
+          <div class="header">
+            <h3> <a href="#"> Heart</a></h3>
+          </div>
+          <div class="matter" style="background: rgba(209, 73, 46,0.5);">
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-md-4 col-sm-6  ">
+        <div class="thumbnail">
+          <img src="http://ak4.picdn.net/shutterstock/videos/9488324/thumb/1.jpg" alt="lungs">
+          <div class="header">
+-->
+<!--
+            <h3> <a href="#"> Lungs</a></h3>
+          </div>
+          <div class="matter" style="background: rgba(69, 58, 188,0.5);">
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6  ">
+        <div class="thumbnail">
+          <img src="https://ak3.picdn.net/shutterstock/videos/78283/thumb/1.jpg" alt="kidney">
+          <div class="header">
+            <h3> <a href="#"> Kidney</a></h3>
+          </div>
+          <div class="matter" style="background: rgba(126, 59, 198,0.5);">
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 col-sm-6  ">
+        <div class="thumbnail">
+          <img src="https://ak0.picdn.net/shutterstock/videos/10916930/thumb/1.jpg?i10c=img.resize(height:160)" alt="liver">
+          <div class="header">
+            <h3> <a href="#"> Liver</a></h3>
+          </div>
+          <div class="matter" style="background: rgba(226, 147, 27,0.5);">
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 ">
+        <div class="thumbnail">
+          <img src="http://ak3.picdn.net/shutterstock/videos/5146103/thumb/1.jpg" alt="knee">
+          <div class="header">
+            <h3> <a href="#"> Knee</a></h3>
+          </div>
+          <div class="matter" style="background: rgba(237, 192, 97,0.5);">
+
+          </div>
+
+
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6  ">
+        <div class="thumbnail">
+          <img src="https://ak0.picdn.net/shutterstock/videos/15102160/thumb/1.jpg" alt="spine">
+          <div class="header">
+            <h3><a href="#">Spine</a></h3>
+          </div>
+          <div class="matter" style="background: rgba(163, 155, 138,0.5);">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<% include partials/footer.ejs %>

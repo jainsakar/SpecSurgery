@@ -1,0 +1,58 @@
+<% include partials/header.ejs%>   
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">Specube</p>
+            <div class="list-group">
+                <li class="list-group-item active">Info 1</li>
+                <li class="list-group-item">Info 2</li>
+                <li class="list-group-item">Info 3</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="img-responsive" src="<%= hospital.image %>">
+                <div class="caption-full">
+                    <h4 class="pull-right"><%= hospital.location %></h4>
+                    <h4><a><%=hospital.name%></a></h4>
+                    <p>ICU-Rent: <%= hospital.icuRent %></p>
+                    <p>General-Rent: <%= hospital.generalRent %></p>
+                    <p>Facilities Rating: <%= hospital.facilities %></p>
+                    <p>Minimum Qualification Of Doctors Rating: <%= hospital.minQualification %></p>
+                    <p>Minimum experience of doctors in yrs: <%= hospital.minExp %></p>
+                    <p>Year of Establishment: <%= hospital.yearOfEstablishment%></p>
+                    <p>No. of Frauds: <%= hospital.noOfFrauds %></p>
+                        <a class="btn btn-xs btn-warning" href="/admin/hospitals/<%=hospital._id%>/edit">Edit</a>
+                        <form id="delete-form" action="/admin/hospitals/<%= hospital._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-xs btn-danger">Delete</button>
+                        </form>
+                </div>
+            </div>
+            <div class="well">
+                <div class="text-right">
+                        <a class="btn btn-success" href="/admin/hospitals/<%= hospital._id %>/surgery/new">Add New Surgery</a>
+                </div>
+                <hr>
+                <% hospital.surgery.forEach(function(surgery) { %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <strong><%= surgery.disease %></strong>
+                            <p>Cost: <%= surgery.cost %></p>
+                            <p>Success Rate: <%= surgery.successRate %></p>
+                            <p>Casualities: <%= surgery.casualities %></p>    
+                               
+                                <form id="delete-form" action="/admin/hospitals/<%= hospital._id %>/surgery/<%= surgery._id %>?_method=DELETE" method="POST">
+                                    <button class="btn btn-xs btn-danger">Delete</button>
+                                </form>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+    
+    
+<% include partials/footer.ejs%>    

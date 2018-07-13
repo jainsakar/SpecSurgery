@@ -1,0 +1,57 @@
+<% include partials/header%>
+<link rel="stylesheet" type="text/css" href="../stylesheets/new.css">
+
+<div id="box" class="ui main text container segment">
+    <div class="ui huge header">New Hospital</div>
+    <form  class="ui form" action="/admin/hospitals" method="POST">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="hospital[name]" placeholder="name">
+        </div>
+        
+        <div class="field">
+            <label>Location</label>
+            <input type="text" name="hospital[location]" placeholder="location">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="hospital[image]" placeholder="image">
+        </div>
+        <div class="field">
+            <label>ICU-Rent</label>
+            <input type="text" name="hospital[icuRent]" placeholder="icuRent">
+        </div>
+         <div class="field">
+            <label>General-Rent</label>
+            <input type="text" name="hospital[generalRent]" placeholder="generalRent">
+        </div>
+         <div class="field">
+            <label>facility rating(0-10)</label>
+            <input type="text" name="hospital[facilities]" placeholder="icuRent">
+        </div>
+        
+        <div class="field">
+            <label>Doctor's Minimum Qualification Rating(0-10)</label>
+            <input type="text" name="hospital[minQualification]" placeholder="Minimum Qualification Rating">
+        </div>   
+         <div class="field">
+            <label>Minimum Experience of Doctor in years</label>
+            <input type="text" name="hospital[minExp]" placeholder="Minimum Experience of doctor">
+        </div>
+         <div class="field">
+            <label>Year of establishment</label>
+            <input type="text" name="hospital[yearOfEstablishment]" placeholder="Year of Establishment">
+        </div>
+         <div class="field">
+            <label>No. of Frauds</label>
+            <input type="text" name="hospital[noOfFrauds]" placeholder="No of Frauds">
+        </div>
+         
+        <input class="ui violet basic button" type="submit">
+    </form>
+</div>
+
+
+
+
+<% include partials/footer%>
