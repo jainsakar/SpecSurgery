@@ -71,21 +71,6 @@ var surgerySchema=new mongoose.Schema({
     
 });
 var Surgery=mongoose.model("Surgery",surgerySchema);
-//creating a fraud
-//Fraud.create({
-//     title:"Test fraud",
-//    hospital:"Shanti KUmud",
-//    location:"Delhi",
-//    diseases:"Kidney Stone",
-//     image:"https://images.unsplash.com/photo-1455383333344-451b6147021b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=28ca5d5a1de1b9252287abe3cea80c59",
-//     body:"hello this is a fraud post" 
-//  },function(err,fraud){
-//      if(err){
-//          console.log(err);
-//      }else{
-//          console.log(fraud);
-//      }
-//  });
 //routes
 app.get("/", function(req, res) {
   res.render("index",{currentUser: req.user});
@@ -432,86 +417,7 @@ app.post("/filter",function(req,res){
         }
   },4000)
     
-//     Hospital.findById(minId).populate("surgery").exec(function(err,foundhospital){
-//                  if(err){
-//                      console.log(err);
-//                      res.redirect("/");
-//                  } else{
-//                      res.render("filter",{hospital: foundhospital});
-//                  }
-//            });   
-//    var i=0;
-//    var costkeys=[];
-//     for (var key of myMap.keys()) {
-//         costkeys.push(key);
-//     }
-//    costkeys.sort();
-//    costkeys.forEach(function(key){
-//       sortedMap.set(key,myMap.get(key)); 
-//    });
-//    console.log(costkeys[0]);
-//    for(var i=0;i<costKeys.length;i=i+1)
-//        {
-//            console.log(costkeys[i]+" ");
-//        }
-//    costkeys.sort()
-//    costkeys.sort().map(function(key){
-//        sortedMap.set(key,myMap.get(key));
-//    });
-//    var count=0;
-//    var topid;
-//
-//    for (var value of sortedMap.values()) {
-//        if(count<1)
-//            {
-//                topid=value;
-//                count=count+1;
-//            }
-//        else{
-//            break;
-//        }
-//       
-//     }
-//   
-//    var counter=false;
-//    if(topid)
-//        {
-////            res.send("completed");
-//            console.log(effective_cost);
-//            counter=true;
-//        }
-//    if(counter==true)
-//        {
-//            counter=false;
-//            Hospital.findById(topid).populate("surgery").exec(function(err,foundhospital){
-//                  if(err){
-//                      console.log(err);
-//                      res.redirect("/");
-//                  } else{
-//                      res.render("filter",{hospital: foundhospital});
-//                  }
-//            });   
-//             myMap.clear();
-//            sortedMap.clear();
-//            
-//            
-//        }
-    
-//    Hospital.find({},function(err,hospitals){
-//               if(err){
-//                   console.log(err);
-//               } else{
-//                   console.log(hospitals);
-////                   foundhospital.surgery.forEach(function(surgery) {
-////                        if(surgery.disease==req.body.surgeries)
-////                            console.log("working");
-////                   });
-////                   if(foundhospital.surgery.disease==req.body.surgeries)
-////                       {
-////                           console.log("working fine!!!!!");
-////                       }
-//               }
-//            });
+
 });
 app.get('/filter/:id',function(req,res){
     Hospital.findById(req.params.id).populate("surgery").exec(function(err,foundhospital){
